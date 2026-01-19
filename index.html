@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Class Attendance</h1>
+
+    <div class="card add-subject-box">
+        <input type="text" id="subjectInput" placeholder="Enter Subject Name (e.g. Physics)">
+        <button class="btn-add" onclick="addSubject()">Add</button>
+    </div>
+
+    <div id="subjectList"></div>
+
+    <div class="footer-tools">
+        <button class="btn-tool btn-excel" onclick="exportToExcel()">📊 Export Excel</button>
+        <button class="btn-tool" onclick="exportData()">💾 Save Backup</button>
+        <button class="btn-tool" onclick="document.getElementById('importFile').click()">📂 Load Backup</button>
+        <input type="file" id="importFile" style="display:none" onchange="importData(event)">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
